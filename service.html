@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Al Kabeer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="services-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+<header>
+  <div class="logo">
+    <img src="Screenshot 2025-12-05 083243.png" alt="Al Kabeer Logo" />
+    <h2>Al Kabeer</h2>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a class="active" href="service.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="services-hero parallax-bg">
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <span class="hero-badge">What We Offer</span>
+    <h1 class="hero-title">Premium Services</h1>
+    <p class="hero-subtitle">Excellence in Events & Real Estate</p>
+  </div>
+  <div class="scroll-indicator">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- Service Categories Toggle -->
+<section class="service-categories">
+  <div class="container">
+    <div class="category-tabs fade-in-up">
+      <button class="tab-btn active" data-category="all">
+        <i class="fas fa-th"></i>
+        All Services
+      </button>
+      <button class="tab-btn" data-category="events">
+        <i class="fas fa-calendar-alt"></i>
+        Event Planning
+      </button>
+      <button class="tab-btn" data-category="realestate">
+        <i class="fas fa-building"></i>
+        Real Estate
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section">
+  <div class="container">
+
+    <!-- Event Services -->
+    <div class="service-card events fade-in-up" style="animation-delay: 0.1s;">
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c8b0?w=800&q=80" alt="Wedding Events" />
+        <div class="service-badge">Premium</div>
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <i class="fas fa-ring"></i>
+        </div>
+        <h3>Wedding Events</h3>
+        <p>Create your dream wedding with our comprehensive planning services including decoration, catering, photography, stage setup, music, and full coordination.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Professional Decoration</li>
+          <li><i class="fas fa-check"></i> Premium Catering</li>
+          <li><i class="fas fa-check"></i> Photography & Videography</li>
+          <li><i class="fas fa-check"></i> Complete Coordination</li>
+        </ul>
+        <a href="contact.html" class="service-btn">
+          Get Started
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card events fade-in-up" style="animation-delay: 0.2s;">
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80" alt="Corporate Events" />
+        <div class="service-badge">Professional</div>
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3>Corporate Events</h3>
+        <p>Professional event management for meetings, conferences, product launches, award nights, and corporate celebrations with impeccable execution.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Conference Planning</li>
+          <li><i class="fas fa-check"></i> Product Launches</li>
+          <li><i class="fas fa-check"></i> Award Ceremonies</li>
+          <li><i class="fas fa-check"></i> Team Building Events</li>
+        </ul>
+        <a href="contact.html" class="service-btn">
+          Get Started
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card events fade-in-up" style="animation-delay: 0.3s;">
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80" alt="Private Parties" />
+        <div class="service-badge">Popular</div>
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <i class="fas fa-birthday-cake"></i>
+        </div>
+        <h3>Birthday & Private Parties</h3>
+        <p>Memorable celebrations with theme decoration, custom cakes, lighting, DJ services, and complete party arrangements for all ages.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Theme Decoration</li>
+          <li><i class="fas fa-check"></i> Custom Cakes</li>
+          <li><i class="fas fa-check"></i> DJ & Entertainment</li>
+          <li><i class="fas fa-check"></i> Full Arrangements</li>
+        </ul>
+        <a href="contact.html" class="service-btn">
+          Get Started
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Real Estate Services -->
+    <div class="service-card realestate fade-in-up" style="animation-delay: 0.4s;">
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Real Estate Consultation" />
+        <div class="service-badge">Trusted</div>
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <i class="fas fa-home"></i>
+        </div>
+        <h3>Real Estate Consultation</h3>
+        <p>Expert guidance for buying, selling, and renting properties with verified documentation and transparent processes for your peace of mind.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Buy & Sell Properties</li>
+          <li><i class="fas fa-check"></i> Rental Services</li>
+          <li><i class="fas fa-check"></i> Verified Documentation</li>
+          <li><i class="fas fa-check"></i> Legal Support</li>
+        </ul>
+        <a href="contact.html" class="service-btn">
+          Get Started
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card realestate fade-in-up" style="animation-delay: 0.5s;">
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80" alt="Property Management" />
+        <div class="service-badge">Essential</div>
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3>Property Management</h3>
+        <p>Comprehensive property care with maintenance services, rental support, tenant management, and regular inspections for hassle-free ownership.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Maintenance Services</li>
+          <li><i class="fas fa-check"></i> Tenant Management</li>
+          <li><i class="fas fa-check"></i> Rental Collection</li>
+          <li><i class="fas fa-check"></i> Regular Inspections</li>
+        </ul>
+        <a href="contact.html" class="service-btn">
+          Get Started
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card realestate fade-in-up" style="animation-delay: 0.6s;">
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Land Deals" />
+        <div class="service-badge">Investment</div>
+      </div>
+      <div class="service-content">
+        <div class="service-icon">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <h3>Land & Layout Deals</h3>
+        <p>Verified land plots, DTCP approved layouts, and new development projects with complete legal clearance and investment guidance.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Verified Land Plots</li>
+          <li><i class="fas fa-check"></i> DTCP Approved Layouts</li>
+          <li><i class="fas fa-check"></i> New Projects</li>
+          <li><i class="fas fa-check"></i> Investment Guidance</li>
+        </ul>
+        <a href="contact.html" class="service-btn">
+          Get Started
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <span class="section-label">Our Process</span>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Simple steps to get started with our services</p>
+    </div>
+
+    <div class="process-timeline">
+      <div class="timeline-item fade-in-up" style="animation-delay: 0.1s;">
+        <div class="timeline-icon">
+          <span class="step-number">01</span>
+          <i class="fas fa-comments"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Consultation</h3>
+          <p>Share your requirements and vision with our expert team</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-up" style="animation-delay: 0.2s;">
+        <div class="timeline-icon">
+          <span class="step-number">02</span>
+          <i class="fas fa-clipboard-list"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Planning</h3>
+          <p>We create a detailed plan tailored to your needs</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-up" style="animation-delay: 0.3s;">
+        <div class="timeline-icon">
+          <span class="step-number">03</span>
+          <i class="fas fa-handshake"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Agreement</h3>
+          <p>Transparent pricing and contract finalization</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-up" style="animation-delay: 0.4s;">
+        <div class="timeline-icon">
+          <span class="step-number">04</span>
+          <i class="fas fa-rocket"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Execution</h3>
+          <p>Professional delivery with attention to every detail</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Our Services -->
+<section class="why-services">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-item fade-in-up" style="animation-delay: 0.1s;">
+        <div class="why-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>15+ Years Experience</h3>
+        <p>Proven track record of excellence</p>
+      </div>
+      <div class="why-item fade-in-up" style="animation-delay: 0.2s;">
+        <div class="why-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Expert Team</h3>
+        <p>Skilled professionals dedicated to you</p>
+      </div>
+      <div class="why-item fade-in-up" style="animation-delay: 0.3s;">
+        <div class="why-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>100% Satisfaction</h3>
+        <p>Your happiness is our guarantee</p>
+      </div>
+      <div class="why-item fade-in-up" style="animation-delay: 0.4s;">
+        <div class="why-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Always here when you need us</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="services-cta">
+  <div class="cta-overlay"></div>
+  <div class="container">
+    <div class="cta-content fade-in-up">
+      <h2>Ready to Get Started?</h2>
+      <p>Let's discuss your requirements and create something amazing together</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn-cta-primary">
+          Contact Us Now
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="tel:+1234567890" class="btn-cta-secondary">
+          <i class="fas fa-phone"></i>
+          Call Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Al Kabeer. All Rights Reserved.</p>
+</footer>
+
+<script src="header-script.js"></script>
+<script src="services-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: #e5d2b8;
+  color: #222;
+}
+
+/* ===========================
+   ANIMATED HEADER STYLES
+   =========================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: linear-gradient(135deg, rgba(198, 177, 151, 0.95) 0%, rgba(229, 210, 184, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideDown 0.6s ease-out;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent,
+    #55331e 20%,
+    #8b6f47 50%,
+    #55331e 80%,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+header:hover::before {
+  opacity: 1;
+}
+
+/* Logo Styles with Animation */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(85, 51, 30, 0.2));
+  animation: logoFloat 3s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.logo:hover img {
+  filter: drop-shadow(0 6px 12px rgba(85, 51, 30, 0.4));
+  transform: rotate(5deg);
+}
+
+.logo h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #55331e 0%, #8b6f47 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  position: relative;
+  animation: textShine 4s ease-in-out infinite;
+}
+
+/* Navigation Styles with Animations */
+nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav a {
+  position: relative;
+  margin: 0 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #222;
+  font-size: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Underline Animation */
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #55331e, #8b6f47);
+  border-radius: 2px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Background Hover Effect */
+nav a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(85, 51, 30, 0.1) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+nav a:hover::after {
+  transform: scale(1);
+}
+
+nav a:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+nav a:hover {
+  color: #55331e;
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  color: #55331e;
+  font-weight: 700;
+  background: rgba(85, 51, 30, 0.08);
+  border-radius: 10px;
+}
+
+nav a.active::before {
+  transform: translateX(-50%) scaleX(1);
+  background: linear-gradient(90deg, #55331e, #8b6f47, #55331e);
+  animation: activePulse 2s ease-in-out infinite;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: #55331e;
+  border-radius: 3px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.mobile-menu-toggle:hover span {
+  background: #8b6f47;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Header Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes textShine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes activePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: linear-gradient(135deg, rgba(198, 177, 151, 0.98) 0%, rgba(229, 210, 184, 0.98) 100%);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+    margin: 0;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInNav 0.5s forwards;
+  }
+
+  nav.active a:nth-child(1) { animation-delay: 0.1s; }
+  nav.active a:nth-child(2) { animation-delay: 0.2s; }
+  nav.active a:nth-child(3) { animation-delay: 0.3s; }
+  nav.active a:nth-child(4) { animation-delay: 0.4s; }
+  nav.active a:nth-child(5) { animation-delay: 0.5s; }
+
+  .logo h2 {
+    font-size: 1.3rem;
+  }
+
+  .logo img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@keyframes slideInNav {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero {
+  height: 80vh;
+  background: url('banner.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  color: white;
+}
+
+.btn {
+  background: #55331e;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  gap: 30px;
+}
+
+.feature-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.page-header {
+  background: #c6b197;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.services-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.service-box,
+.gallery-grid img {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.contact-section {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+}
+
+button {
+  padding: 15px;
+  background: #55331e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+footer {
+  padding: 20px;
+  background: #55331e;
+  text-align: center;
+  color: white;
+}
