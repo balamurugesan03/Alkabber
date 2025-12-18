@@ -488,16 +488,15 @@
 }
 
 .team-image {
-  position: relative;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  height: 350px;
 }
 
 .team-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  object-position: top;
 }
 
 .team-card:hover .team-image img {
@@ -668,6 +667,10 @@
   .team-grid {
     grid-template-columns: 1fr;
   }
+
+  .team-image {
+    height: 350px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -681,5 +684,9 @@
 
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .team-image {
+    height: 300px;
   }
 }
