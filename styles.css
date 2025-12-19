@@ -75,13 +75,9 @@ header:hover::before {
 .logo h2 {
   font-size: 1.6rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #55331e 0%, #8b6f47 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: rgb(93, 49, 50);
   letter-spacing: 1px;
   position: relative;
-  animation: textShine 4s ease-in-out infinite;
 }
 
 /* Navigation Styles with Animations */
